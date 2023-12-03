@@ -168,6 +168,11 @@ body.open .sidebar-menu>div>a>span {
         background: #0f0f0f;
     }
 
+    /* Hide header in mobile mode when sidebar is closed */
+    body:not(.open) .sidebar-header {
+        display: none;
+    }
+
     /* Hides the menu only when sidebar is closed */
     body:not(.open) .sidebar-menu {
         display: none;
