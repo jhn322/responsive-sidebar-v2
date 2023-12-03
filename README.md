@@ -7,7 +7,7 @@ https://github.com/jhn322/responsive-sidebar-v1.git
 
 ## Improvements
 
-Several improvements in JS to allow the sidebar to dynamically open and close on mouse hover on delay and more mobile optimized with touch events.
+Several improvements in JS to allow the sidebar to dynamically open and close on mouse hover on delay and more mobile optimisation by allowing the user to swipe to open & close the sidebar with touch events.
 
 ### GitHub pages links
 
