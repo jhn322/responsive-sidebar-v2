@@ -1,0 +1,185 @@
+/* Universal setttings */
+* {
+    box-sizing: border-box;
+    font-family: 'Chakra Petch', sans-serif;
+    font-weight: 500;
+}
+
+/* Body positioning */
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Default settings for all div elements */
+div {
+    background: transparent;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+}
+
+/* Sidebar container */
+.sidebar {
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 75px;
+    display: flex;
+    z-index: 3;
+    flex-direction: column;
+    background: #0f0f0f;
+    transition: all 0.4s;
+}
+
+/* Current page indicator */
+.sidebar a.active {
+    color: #0f0f0f;
+    background-color: #2597ab;
+}
+
+/* Width of sidebar when in open mode */
+body.open .sidebar {
+    width: 265px;
+}
+
+/* Inner part of the sidebar */
+.sidebar-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+}
+
+/* Styling for the top of the sidebar */
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    height: 68px;
+    padding: 0 1.25rem 0 0;
+    background: rgba(0, 0, 0, 0.1);
+    border-left: 3px solid transparent;
+    transition: all 0.4s;
+}
+
+/* Hover for top of the sidebar */
+.sidebar-header:hover {
+    border-left: 3px solid #2597ab;
+}
+
+/* Burger icon at the top of the sidebar */
+.sidebar-burger {
+    width: 70px;
+    height: 70px;
+    display: grid;
+    place-items: center;
+}
+
+/* Styling for burger icon and its transition */
+.sidebar-burger>i,
+body.open .sidebar-burger>i {
+    font-size: 25px;
+    color: #ededed;
+    transition: all 0.4s;
+}
+
+
+/* Hover effect on burger icon */
+.sidebar-burger:hover>i,
+body.open .sidebar-burger:hover>i {
+    color: #aeaeae;
+}
+
+/* Grid for sidebar menu */
+.sidebar-menu {
+    display: grid;
+}
+
+/* Styling for the sidebar menu items */
+.sidebar-menu>div>a {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    height: 55px;
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    line-height: 1;
+    padding: 0 22px;
+    border-left: 3px solid transparent;
+    transition: all 0.4s;
+    text-decoration: none;
+    color: #ededed;
+}
+
+/* Hover effect for menu items */
+.sidebar-menu>div>a:hover {
+    color: #aeaeae;
+    border-left: 3px solid #2597ab;
+}
+
+/* Adds divider lines in sidebar */
+.sidebar-menu>div.has-border {
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    margin-bottom: 1rem;
+}
+
+/* Styling for icons */
+.sidebar-menu>div>a>i {
+    font-size: 25px;
+    color: #ededed;
+    transition: all 0.4s;
+}
+
+/* Hover for remaining icons in sidebar */
+.sidebar-menu>div:hover>i,
+.sidebar-menu>button:hover>span {
+    color: #aeaeae;
+}
+
+/* Styling for sidebar text */
+.sidebar-menu>div>a>span {
+    opacity: 0;
+    transition: all 0.4s;
+}
+
+/* Text properties when sidebar is open */
+body.open .sidebar-menu>div>a>span {
+    opacity: 1;
+    transition: all 0.4s;
+}
+
+/* Mobile mode */
+@media only screen and (max-width: 699px) {
+
+    /* Makes the sidebar transparent */
+    .sidebar {
+        background: rgba(15, 15, 15, 0);
+    }
+
+    /* Makes the sidebar solid when opened */
+    body.open .sidebar {
+        background: #0f0f0f;
+    }
+
+    /* Hides the menu only when sidebar is closed */
+    body:not(.open) .sidebar-menu {
+        display: none;
+    }
+
+    /* Keeps the header semi-visible */
+    .sidebar-header {
+        background: rgba(15, 15, 15, 0.6);
+    }
+
+    .sidebar-menu {
+        overflow-y: auto;
+        max-height: calc(100vh - 68px);
+    }
+}
