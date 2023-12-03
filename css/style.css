@@ -39,7 +39,7 @@ div {
 /* Current page indicator */
 .sidebar a.active {
     color: #0f0f0f;
-    background-color: #2597ab;
+    background-color: #ab2925;
 }
 
 /* Width of sidebar when in open mode */
@@ -68,7 +68,7 @@ body.open .sidebar {
 
 /* Hover for top of the sidebar */
 .sidebar-header:hover {
-    border-left: 3px solid #2597ab;
+    border-left: 3px solid #ab2925;
 }
 
 /* Burger icon at the top of the sidebar */
@@ -120,7 +120,7 @@ body.open .sidebar-burger:hover>i {
 /* Hover effect for menu items */
 .sidebar-menu>div>a:hover {
     color: #aeaeae;
-    border-left: 3px solid #2597ab;
+    border-left: 3px solid #ab2925;
 }
 
 /* Adds divider lines in sidebar */
